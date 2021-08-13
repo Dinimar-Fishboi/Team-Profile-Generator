@@ -1,7 +1,6 @@
 {
   "name": "teamProfileGenerator",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "directories": {
     "lib": "lib",
@@ -22,6 +21,9 @@
   },
   "homepage": "https://github.com/Dinimar-Fishboi/Team-Profile-Generator#readme",
   "dependencies": {
+    "inquire": "^0.4.8",
     "inquirer": "^8.1.2"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
