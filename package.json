@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/Dinimar-Fishboi/Team-Profile-Generator#readme",
   "dependencies": {
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
     "inquire": "^0.4.8",
     "inquirer": "^8.1.2"
   },
