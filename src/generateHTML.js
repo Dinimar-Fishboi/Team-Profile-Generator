@@ -1,6 +1,5 @@
 function generateManager(thisIsTheManager){
     return `
-    <!------REMEMBER TO CHECK IF CSS CLASS IS LINKED CORRECTLY AT END OF PROJECT----->
     <!DOCTYPE html>
 <html lang="en">
 <head>
