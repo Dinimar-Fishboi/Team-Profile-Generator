@@ -83,14 +83,13 @@ init = () => {
         console.log(newManager); 
          
         const  {managerName, managerEmployeeID, managerEmail, managerOffice} = newManager; 
-        // const manager = new Manager (name, id, email, officeNumber);
-       // const ( (newManager.managerName), managerEmployeeID, managerEmail, managerOffice) = newManager;
         console.log(newManager); 
 
         const thisIsTheManager = new Manager(managerName, managerEmployeeID, managerEmail, managerOffice);
         console.log(thisIsTheManager);
-})}
-//         appendStaff("index.html", generateManager(thisIsTheManager));
+
+        appendStaff("index.html", generateManager(thisIsTheManager));
+    })}
 //         inquirer.prompt(teamChoiceQuestions)
 //         .then(answer => {
 //             console.log(answer.teamChoice)
