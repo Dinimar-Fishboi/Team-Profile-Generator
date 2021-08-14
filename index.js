@@ -68,11 +68,11 @@ teamMember = () => {
     inquirer.prompt(teamChoiceQuestions)
     .then(answer => {
         console.log(answer)
-        if (answer.teamChoice === answer.teamChoice[2]) {
+        console.log(answer.teamChoice)
+        if (answer.teamChoice === "That's our team, we have finished!") {
             console.log("Manager has finished adding team members");
-            appendStaff("index.html", closeRanks(answer));
-            console.log(appendStaff("index.html", closeRanks(answer)));
-            
+            console.log(answer.teamChoice)
+            appendStaff("index.html", closeRanks(answer));            
         }
     })
 }
