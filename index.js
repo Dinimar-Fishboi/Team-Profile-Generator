@@ -1,5 +1,7 @@
 const Manager = require('./lib/Manager');
 const Employee = require('./lib/Employee');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateManager = require('./src/generateHTML');
@@ -112,6 +114,15 @@ addEmployee = () => {
     inquirer.prompt(newEmployee)
     .then(answer => {
         console.log(answer);
+        console.log(answer.employeeType);
+        if (answer.employeeType === "Engineer"){
+            const  {employeeName, employeeType, employeeID, employeeEmail, githubUrl} = answer; // PROBLEMS HERE
+            console.log(answer);
+            console.log("we've passed the new constant");
+            const newEngineer = new Employee(employeeName, employeeType, employeeID, employeeEmail, githubUrl);
+            console.log(newEngineer);
+            appendStaff("index.html", addEngineer(newEngineer));
+        }
     })
 }
 
@@ -136,31 +147,9 @@ init = () => {
         const thisIsTheManager = new Manager(managerName, managerEmployeeID, managerEmail, managerOffice);
         console.log(thisIsTheManager);
         appendStaff("index.html", generateManager(thisIsTheManager));
-     //   appendStaff("index.html", closeRanks());
-       teamMember();
+        teamMember();
     })
     .catch((err) => console.error(err));
 }
-//         inquirer.prompt(teamChoiceQuestions)
-//         .then(answer => {
-//             console.log(answer.teamChoice)
-//             switch (teamChoiceAnswer) {
-//                 case (teamChoiceAnswer[0] || teamChoiceAnswer[1]):
-//                    // addEmployee();
-//                    console.log("Adding another team member")
-//                     break;
-            
-//                 default: 
-//                     break;
-//             }
-//         })
-//     //   console.log(newInput)
-//     //   appendStaff("index.html", generateManager(newInput));
-//     // //   appendStaff("index.html", addEngineer(newInput));
-//     //   appendStaff("index.html", addIntern(newInput));
-//     //   appendStaff("index.html", closeRanks(newInput));
-
-//     }); 
-// }
 
 init();
