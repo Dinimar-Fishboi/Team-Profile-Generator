@@ -54,6 +54,49 @@ const teamChoiceQuestions = [
         choices: ["Add another employee", "Finalise team"],
         },
     ];
+
+const newEmployee = [
+    {
+        type: 'input',
+        message: "Please enter Employee's name",
+        name: 'employeeName',
+        validate: confirmInput,
+        }, 
+    {
+        type: 'list',
+        message: "Are they an Engineer or Intern?",
+        name: 'employeeType',
+        choices: ["Engineer","Intern"],
+        }, 
+    {
+        type: 'input',
+        message: "Please enter Employee ID",
+        name: 'employeeID',
+        validate: confirmInput,
+        }, 
+    {
+        type: 'input',
+        message: "Please enter Employee's email",
+        name: 'employeeEmail',
+        validate: confirmInput,
+        }, 
+    {
+        type: 'input',
+        message: "Please enter Engineer's GitHub url",
+        name: 'githubUrl',
+        when(answers) {
+            return answers.employeeType !== "Intern";
+          },
+        }, 
+    {
+        type: 'input',
+        message: "Please enter Intern's School (current or most recent)",
+        name: 'internSchool',
+        when(answers) {
+            return answers.employeeType !== "Engineer";
+          },
+        }, 
+]
     
 
 appendStaff = (fileName, data) => {
@@ -66,10 +109,10 @@ appendStaff = (fileName, data) => {
 
 addEmployee = () => {
     console.log("team needs to be expanded")
-    // inquirer.prompt(newEmployee)
-    // .then(answer => {
-
-    // })
+    inquirer.prompt(newEmployee)
+    .then(answer => {
+        console.log(answer);
+    })
 }
 
 teamMember = () => {
