@@ -51,7 +51,7 @@ const teamChoiceQuestions = [
         type: 'list',
         message: 'Would you like to add a member to your team or finish up?',
         name: 'teamChoice',
-        choices: ["Add an Engineeer", "Oh we hired an Intern", "That's our team, we have finished!"],
+        choices: ["Add another employee", "Finalise team"],
         },
     ];
     
@@ -64,15 +64,22 @@ appendStaff = (fileName, data) => {
       })
 }
 
+addEmployee = () => {
+    console.log("team needs to be expanded")
+    // inquirer.prompt(newEmployee)
+    // .then(answer => {
+
+    // })
+}
+
 teamMember = () => {
     inquirer.prompt(teamChoiceQuestions)
     .then(answer => {
-        console.log(answer)
-        console.log(answer.teamChoice)
-        if (answer.teamChoice === "That's our team, we have finished!") {
+        if (answer.teamChoice === "Finalise team") {
             console.log("Manager has finished adding team members");
-            console.log(answer.teamChoice)
             appendStaff("index.html", closeRanks(answer));            
+        } else {
+            addEmployee();
         }
     })
 }
