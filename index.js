@@ -51,23 +51,11 @@ const teamChoiceQuestions = [
         type: 'list',
         message: 'Would you like to add a member to your team or finish up?',
         name: 'teamChoice',
-        choices: ["Add an Engineeer", "Oh we hired an Intern", "Thanks, I'm good"],
+        choices: ["Add an Engineeer", "Oh we hired an Intern", "That's our team, we have finished!"],
         },
     ];
-  
+    
 
-
-// function appendStaff(fileName, data) {
-//     fs.appendFile(fileName, data, (err) => {
-//         if (err) {
-//             console.log(err);
-//         } else {
-//             console.log('Finished writing')
-//         }
-//     //     //   throw err;
-//     //     //   console.log("Information received")
-//       })
-// }
 appendStaff = (fileName, data) => {
     fs.appendFile(fileName, data, (err) => {
         if (err)
@@ -76,20 +64,33 @@ appendStaff = (fileName, data) => {
       })
 }
 
-// TODO: Create a function to initialize app
+teamMember = () => {
+    inquirer.prompt(teamChoiceQuestions)
+    .then(answer => {
+        console.log(answer)
+        if (answer.teamChoice === answer.teamChoice[2]) {
+            console.log("Manager has finished adding team members");
+            appendStaff("index.html", closeRanks(answer));
+            console.log(appendStaff("index.html", closeRanks(answer)));
+            
+        }
+    })
+}
+
 init = () => {
     inquirer.prompt(managerQuestions)
     .then(newManager => {
-        console.log(newManager); 
-         
+        console.log(newManager);       
         const  {managerName, managerEmployeeID, managerEmail, managerOffice} = newManager; 
         console.log(newManager); 
-
         const thisIsTheManager = new Manager(managerName, managerEmployeeID, managerEmail, managerOffice);
         console.log(thisIsTheManager);
-
         appendStaff("index.html", generateManager(thisIsTheManager));
-    })}
+     //   appendStaff("index.html", closeRanks());
+       teamMember();
+    })
+    .catch((err) => console.error(err));
+}
 //         inquirer.prompt(teamChoiceQuestions)
 //         .then(answer => {
 //             console.log(answer.teamChoice)

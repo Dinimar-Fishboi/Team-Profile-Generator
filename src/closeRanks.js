@@ -1,5 +1,5 @@
 
-function closeRanks() {
+function closeRanks(answer) {
     return `
     </div>
     </body>
