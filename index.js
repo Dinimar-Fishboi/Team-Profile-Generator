@@ -1,5 +1,4 @@
 const Manager = require('./lib/Manager');
-const Employee = require('./lib/Employee');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const inquirer = require('inquirer');
@@ -116,13 +115,24 @@ addEmployee = () => {
         console.log(answer);
         console.log(answer.employeeType);
         if (answer.employeeType === "Engineer"){
-            const  {employeeName, employeeType, employeeID, employeeEmail, githubUrl} = answer; // PROBLEMS HERE
+            const  {employeeName, employeeType, employeeID, employeeEmail, githubUrl} = answer; 
             console.log(answer);
             console.log("we've passed the new constant");
             const newEngineer = new Engineer(employeeName, employeeType, employeeID, employeeEmail, githubUrl);
             console.log(newEngineer);
             appendStaff("index.html", addEngineer(newEngineer));
+            teamMember();
+        } 
+        if (answer.employeeType === "Intern"){
+            const  {employeeName, employeeType, employeeID, employeeEmail, internSchool} = answer; 
+            console.log(answer);
+            console.log("we've passed the new constant");
+            const newIntern = new Intern(employeeName, employeeType, employeeID, employeeEmail, internSchool);
+            console.log(newIntern);
+            appendStaff("index.html", addIntern(newIntern));
+            teamMember();
         }
+        
     })
 }
 
