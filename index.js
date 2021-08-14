@@ -119,7 +119,7 @@ addEmployee = () => {
             const  {employeeName, employeeType, employeeID, employeeEmail, githubUrl} = answer; // PROBLEMS HERE
             console.log(answer);
             console.log("we've passed the new constant");
-            const newEngineer = new Employee(employeeName, employeeType, employeeID, employeeEmail, githubUrl);
+            const newEngineer = new Engineer(employeeName, employeeType, employeeID, employeeEmail, githubUrl);
             console.log(newEngineer);
             appendStaff("index.html", addEngineer(newEngineer));
         }
