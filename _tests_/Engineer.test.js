@@ -1,4 +1,5 @@
 const Engineer = require("../lib/Engineer");
+const Intern = require("../lib/Intern");
 
 
 describe("Engineer Class", () => {
@@ -9,7 +10,7 @@ describe("Engineer Class", () => {
         expect((Alice.getRole()) === "Engineer").toBe(true);
          })
     it("Correct employeeType = Intern returns False", () => {
-        const Blair = new Engineer("Blair", "Intern", "9087", "blair@email.com", "https://github.com/Dinimar-Fishboi")
+        const Blair = new Intern("Blair", "Intern", "9087", "blair@email.com", "UNSW")
         expect((Blair.getRole()) === "Engineer").toBe(false);
         })
       
