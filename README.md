@@ -76,7 +76,7 @@ The newly generated HTML file will appear in the ```dist``` directory.
 
 ## Tests
 
-There are a series of Tests in this project to confirm the Employee class and subclasses are filled in correctly. You can run these after installing the NPM Jest (you can refer to documentation for Jest [here](https://jestjs.io/docs/getting-started)).
+There are a series of Tests in this project to confirm the Employee class and subclasses are filled in correctly. You can run these after installing NPM Jest (you can refer to documentation for Jest [here](https://jestjs.io/docs/getting-started)).
 
 ## Questions
 
