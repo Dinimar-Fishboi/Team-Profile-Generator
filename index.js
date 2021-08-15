@@ -115,19 +115,13 @@ addEmployee = () => {
         // Code to determine if Engineer or Intern will be added
         if (answer.employeeType === "Engineer"){
             const  {employeeName, employeeType, employeeID, employeeEmail, githubUrl} = answer; 
-            console.log(answer);
-            console.log("we've passed the new constant");
             const newEngineer = new Engineer(employeeName, employeeType, employeeID, employeeEmail, githubUrl);
-            console.log(newEngineer);
             appendStaff("dist/index.html", addEngineer(newEngineer));
             teamMember();
         } 
         if (answer.employeeType === "Intern"){
             const  {employeeName, employeeType, employeeID, employeeEmail, internSchool} = answer; 
-            console.log(answer);
-            console.log("we've passed the new constant");
             const newIntern = new Intern(employeeName, employeeType, employeeID, employeeEmail, internSchool);
-            console.log(newIntern);
             appendStaff("dist/index.html", addIntern(newIntern));
             teamMember();
         }
@@ -150,11 +144,8 @@ teamMember = () => {
 init = () => {
     inquirer.prompt(managerQuestions)
     .then(newManager => {
-        console.log(newManager);       
         const  {employeeName, employeeType, employeeID, employeeEmail, managerOffice} = newManager; 
-        console.log(newManager); 
         const thisIsTheManager = new Manager(employeeName, employeeType, employeeID, employeeEmail, managerOffice);
-        console.log(thisIsTheManager);
         appendStaff("dist/index.html", generateManager(thisIsTheManager));
         teamMember();
     })
