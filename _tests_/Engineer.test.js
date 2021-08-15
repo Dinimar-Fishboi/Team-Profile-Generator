@@ -3,7 +3,6 @@ const Intern = require("../lib/Intern");
 
 
 describe("Engineer Class", () => {
-    //Then this is where all the BS is.
     describe("employeeType and getRole", () => {
     it("Correct employeeType = Engineer returns True", () => {
         const Alice = new Engineer("Alice", "Engineer", "5748", "alice@email.com", "https://github.com/Dinimar-Fishboi")

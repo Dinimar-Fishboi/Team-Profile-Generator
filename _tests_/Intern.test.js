@@ -2,7 +2,6 @@ const Intern = require("../lib/Intern");
 const Engineer = require("../lib/Engineer");
 
 describe("Intern Class", () => {
-    //Then this is where all the BS is.
     describe("employeeType and getRole", () => {
         it("Correct employeeType = Intern returns True", () => {
             const Jared = new Intern("Jared", "Intern", "5748", "jared@email.com", "USC")
