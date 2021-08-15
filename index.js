@@ -23,19 +23,19 @@ const managerQuestions = [
     {
         type: 'input',
         message: "Please enter Manager's name.",
-        name: 'managerName',
+        name: 'employeeName',
         validate: confirmInput,
       },
     {
         type: 'input',
         message: "Please enter Manager's employeeId.",
-        name: 'managerEmployeeID',
+        name: 'employeeID',
         validate: confirmInput,
         },
     {
         type: 'input',
         message: "Please enter Manager's email address.",
-        name: 'managerEmail',
+        name: 'employeeEmail',
         validate: confirmInput,
         },
     {
@@ -58,16 +58,16 @@ const teamChoiceQuestions = [
 
 const newEmployee = [
     {
+        type: 'list',
+        message: "Is this employee an Engineer or Intern?",
+        name: 'employeeType',
+        choices: ["Engineer","Intern"],
+        }, 
+    {
         type: 'input',
         message: "Please enter Employee's name",
         name: 'employeeName',
         validate: confirmInput,
-        }, 
-    {
-        type: 'list',
-        message: "Are they an Engineer or Intern?",
-        name: 'employeeType',
-        choices: ["Engineer","Intern"],
         }, 
     {
         type: 'input',
@@ -152,9 +152,9 @@ init = () => {
     inquirer.prompt(managerQuestions)
     .then(newManager => {
         console.log(newManager);       
-        const  {managerName, managerEmployeeID, managerEmail, managerOffice} = newManager; 
+        const  {employeeName, employeeType, employeeID, employeeEmail, managerOffice} = newManager; 
         console.log(newManager); 
-        const thisIsTheManager = new Manager(managerName, managerEmployeeID, managerEmail, managerOffice);
+        const thisIsTheManager = new Manager(employeeName, employeeType, employeeID, employeeEmail, managerOffice);
         console.log(thisIsTheManager);
         appendStaff("index.html", generateManager(thisIsTheManager));
         teamMember();

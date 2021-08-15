@@ -20,10 +20,10 @@ function generateManager(thisIsTheManager){
           Manager
         </div>
         <div class="card-body">
-          <h4 class="card-title">${thisIsTheManager.managerName}</h4>
-          <p class="card-text">Employee ID: ${thisIsTheManager.managerEmployeeID}</p>
+          <h4 class="card-title">${thisIsTheManager.employeeName}</h4>
+          <p class="card-text">Employee ID: ${thisIsTheManager.employeeID}</p>
           <p class="card-text">Office: ${thisIsTheManager.managerOffice}</p>
-          <a href="mailto:${thisIsTheManager.managerEmail}" class="card-link">${thisIsTheManager.managerEmail}</a>
+          <a href="mailto:${thisIsTheManager.employeeEmail}" class="card-link">${thisIsTheManager.employeeEmail}</a>
         </div>
       </div>
     `
