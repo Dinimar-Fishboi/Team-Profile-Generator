@@ -13,7 +13,7 @@ const confirmInput = (value) => {
     if (value){
         return true;
     } else {
-        console.log("Please answer the question: If you wish to leave the program enter ^C");
+        console.log("Please answer the question: If you wish to leave the program enter ^C (please know you will lose all progress and will have to start over");
         return false;
     }
 }
@@ -120,7 +120,7 @@ addEmployee = () => {
             console.log("we've passed the new constant");
             const newEngineer = new Engineer(employeeName, employeeType, employeeID, employeeEmail, githubUrl);
             console.log(newEngineer);
-            appendStaff("index.html", addEngineer(newEngineer));
+            appendStaff("dist/index.html", addEngineer(newEngineer));
             teamMember();
         } 
         if (answer.employeeType === "Intern"){
@@ -129,7 +129,7 @@ addEmployee = () => {
             console.log("we've passed the new constant");
             const newIntern = new Intern(employeeName, employeeType, employeeID, employeeEmail, internSchool);
             console.log(newIntern);
-            appendStaff("index.html", addIntern(newIntern));
+            appendStaff("dist/index.html", addIntern(newIntern));
             teamMember();
         }
         
@@ -141,7 +141,7 @@ teamMember = () => {
     .then(answer => {
         if (answer.teamChoice === "Finalise team") {
             console.log("Manager has finished adding team members");
-            appendStaff("index.html", closeRanks(answer));            
+            appendStaff("dist/index.html", closeRanks(answer));            
         } else {
             addEmployee();
         }
@@ -156,7 +156,7 @@ init = () => {
         console.log(newManager); 
         const thisIsTheManager = new Manager(employeeName, employeeType, employeeID, employeeEmail, managerOffice);
         console.log(thisIsTheManager);
-        appendStaff("index.html", generateManager(thisIsTheManager));
+        appendStaff("dist/index.html", generateManager(thisIsTheManager));
         teamMember();
     })
     .catch((err) => console.error(err));

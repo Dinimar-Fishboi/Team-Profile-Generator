@@ -6,6 +6,8 @@
 
 This is a a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
 
+Please view an example of a generated HTML file in the DIST directory.
+
 ## Screenshot and link to use case
 
 
@@ -53,6 +55,8 @@ npm install --save-dev jest
 Program will require you to add employees one by one; starting with the Manager and then following with the ability to add Engineers or Interns.
 
 The program works primarily using the appendFile function - when you wish to create a new file; we recommend deleting or renaming the previously generated file.
+
+The newly generated HTML file will appear in the DIST folder.
 
 ## Tests
 
