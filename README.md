@@ -13,6 +13,8 @@ Please view an example of a generated HTML file in the DIST directory.
 ## Link to live use case and Screenshot
 
 [Video Walkthrough](https://vimeo.com/587413531)
+
+[Generated HTML file available to review](https://dinimar-fishboi.github.io/Team-Profile-Generator/)
 ![Screen Shot 2021-08-15 at 19 58 42](https://user-images.githubusercontent.com/83541287/129474773-d2eae4b1-d024-418f-b5b3-c6cb27d883e0.png)
 <img width="1247" alt="Screen Shot 2021-08-15 at 20 32 17" src="https://user-images.githubusercontent.com/83541287/129475578-cb3b3cfc-7633-4cfe-95b5-899ccccd21cf.png">
 
