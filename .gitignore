@@ -3,3 +3,8 @@ package.json
 dummy.html 
 .DS_Store
 node_modules
+package.json
+package-lock.json
+*.json
+node_modules
+*node_modules
