@@ -6,6 +6,8 @@
 
 This is a a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
 
+An example of a generated HTML file has been published [here](https://dinimar-fishboi.github.io/Team-Profile-Generator/) for review. Please note the email addresses are fake and the GitHub portfolio links will return you to this account's main page (which naturally can be changed when running the application).
+
 Please view an example of a generated HTML file in the DIST directory.
 
 ## Link to live use case and Screenshot
