@@ -8,7 +8,11 @@ This is a a Node.js command-line application that takes in information about emp
 
 Please view an example of a generated HTML file in the DIST directory.
 
-## Screenshot and link to use case
+## Link to live use case and Screenshot
+
+[Video Walkthrough](https://vimeo.com/587413531)
+![Screen Shot 2021-08-15 at 19 58 42](https://user-images.githubusercontent.com/83541287/129474773-d2eae4b1-d024-418f-b5b3-c6cb27d883e0.png)
+
 
 
 ## Table of Contents 
