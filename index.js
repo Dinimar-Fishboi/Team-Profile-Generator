@@ -13,7 +13,7 @@ const confirmInput = (value) => {
     if (value){
         return true;
     } else {
-        console.log("Please answer the question or enter ^C");
+        console.log("Please answer the question: If you wish to leave the program enter ^C");
         return false;
     }
 }
