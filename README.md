@@ -59,11 +59,20 @@ npm install --save-dev jest
 
 ## Usage
 
+To run the application; type the following from the ```teamProfileGenerator``` directory:
+```md
+node index.js
+```
+To run the tests; type the following from the ```_tests_``` directory:
+```md
+npm run test
+```
+
 Program will require you to add employees one by one; starting with the Manager and then following with the ability to add Engineers or Interns.
 
-The program works primarily using the appendFile function - when you wish to create a new file; we recommend deleting or renaming the previously generated file.
+The program works primarily using the appendFile function - thus when you wish to create a new file; we recommend deleting or renaming the previously generated file.
 
-The newly generated HTML file will appear in the DIST folder.
+The newly generated HTML file will appear in the ```dist``` directory.
 
 ## Tests
 
