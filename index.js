@@ -112,8 +112,7 @@ addEmployee = () => {
     console.log("team needs to be expanded")
     inquirer.prompt(newEmployee)
     .then(answer => {
-        console.log(answer);
-        console.log(answer.employeeType);
+        // Code to determine if Engineer or Intern will be added
         if (answer.employeeType === "Engineer"){
             const  {employeeName, employeeType, employeeID, employeeEmail, githubUrl} = answer; 
             console.log(answer);
